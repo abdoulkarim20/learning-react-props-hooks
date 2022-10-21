@@ -1,0 +1,19 @@
+.menu {
+  background: yellow;
+}
+ul {
+  list-style: none;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  font-size: large;
+}
+a {
+  text-decoration: none;
+}
+.active-link {
+  font-weight: 400;
+  color: aqua;
+}

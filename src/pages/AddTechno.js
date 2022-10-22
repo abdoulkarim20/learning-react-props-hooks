@@ -1,24 +1,34 @@
-const AddTechno = () => {
+const AddTechno = (props) => {
+    /*On utiliser la destructuring pour passer les props*/
+    const { handleAddTechno } = props;
+    const techno = {
+        name: "REACT",
+        categorie: "Front End",
+        description: "Objectif devenir MERN STACK"
+    }
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        handleAddTechno(techno)
+    }
     return (
         <div className="add-techno">
-            <h1>Je suis le formulaire pour ajouter une technologie a apprendre</h1>
-            <form>
-                <label htmlFor="techno-name">Nom de la technologie</label><br />
-                <input name="techno-name" id="techno-name" placeholder="techno-name" /><br/>
-                <label htmlFor="tech-categore">Categorie de la technologe</label><br />
-                <select name="techno-categorie" id="tech-categore">
-                    <option>Selectionner une categorie</option>
-                    <option value="Front">Front</option>
-                    <option value="Back">Back</option>
-                    <option value="FullStack">FullStack</option>
-                    <option value="Autre">Autre</option>
-                </select><br/>
-                <label htmlFor="techno-description"></label>Description de la technologie<br />
-                <textarea name="techno-description" id="techno-description">
+            <h1 className="text-center">Je suis le formulaire pour ajouter une technologie a apprendre</h1>
+            <form onSubmit={(e) => handleSubmit(e)}>
+                <div className="form-control col-md-6 my-2">
+                    <label for="techno-name" className="form-label">Nom de la technologie</label>
+                    <input type="email" className="form-control" id="techno-name" aria-describedby="emailHelp" />
+                </div>
+                <div className="form-control col-md-6 my-2">
+                    <select className="">
 
-                </textarea><br/>
-                <button>Annuler</button>
-                <button>Enregistrer</button>
+                    </select>
+                </div>
+                <div className="form-control my-2">
+                    <textarea>
+
+                    </textarea>
+                </div>
+                <button type="submit" className="btn btn-primary">Submit</button>
             </form>
         </div>
     )

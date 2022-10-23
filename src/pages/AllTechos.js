@@ -1,6 +1,6 @@
 const AllTechnos = () => {
     return (
-        <div className="all-techno">
+        <div className="container add-techno">
             <h1>Je suis la page pour toutes les techno a apprendres</h1>
         </div>
     )

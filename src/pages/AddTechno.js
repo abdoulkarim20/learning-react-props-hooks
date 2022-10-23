@@ -22,7 +22,7 @@ const AddTechno = (props) => {
         })
     }
     return (
-        <div className="add-techno">
+        <div className="container add-techno">
             <h1 className="text-center">Je suis le formulaire pour ajouter une technologie a apprendre</h1>
             <form onSubmit={(e) => handleSubmit(e)}>
                 <div className="form-control col-md-6 my-2">
@@ -38,7 +38,10 @@ const AddTechno = (props) => {
                     />
                 </div>
                 <div className="form-control col-md-6 my-2">
+                    <label htmlFor="techno-categorie" className="form-label">Technologie categorie</label>
                     <select
+                        className="form-select "
+                        aria-label="Default select example"
                         type="text"
                         name="categorie"
                         value={techno.categorie}
@@ -52,18 +55,22 @@ const AddTechno = (props) => {
                     </select>
                 </div>
                 <div className="form-control my-2">
+                    <label htmlFor="techno-description">Description</label>
                     <textarea
+                        className="form-control"
+                        placeholder="Description de votre maniere d'apprendre"
+                        id="techno-description"
                         type="text"
                         name="description"
                         value={techno.description}
                         onChange={(e) => handleChange(e)}
-                        id="techno-description"
-                        aria-describedby="emailHelp"
                     >
 
                     </textarea>
                 </div>
-                <button type="submit" className="btn btn-primary">Submit</button>
+                <div>
+                    <button type="submit" className="btn btn-primary">Enregistrer</button>
+                </div>
             </form>
         </div>
     )

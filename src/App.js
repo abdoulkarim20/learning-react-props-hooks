@@ -10,6 +10,7 @@ function App() {
   /*un objet de techno
   [{name:"react",categorie:"front end",description:"objectif devenir un MERN"}]*/
   const handleAddTechno = (techno) => {
+    setTechno([...technos,techno])
     console.log('la techno ajoute est:', techno);
   }
   return (

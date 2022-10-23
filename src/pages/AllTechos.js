@@ -1,7 +1,18 @@
-const AllTechnos = () => {
+import TechnoCard from "../components/technoCard";
+
+const AllTechnos = (props) => {
+    const { technos } = props;
+    console.log('les technos ajouter depuis le formulaire sont:', technos);
     return (
         <div className="container add-techno">
-            <h1>Je suis la page pour toutes les techno a apprendres</h1>
+            <h1>La liste de mes technologies</h1>
+            <div className="techno-liste">
+                {
+                    technos.map(techno => (
+                        <TechnoCard techno={techno} key={techno.technoid} />
+                    ))
+                }
+            </div>
         </div>
     )
 }

@@ -28,6 +28,7 @@ const AddTechno = (props) => {
                 <div className="form-control col-md-6 my-2">
                     <label htmlFor="techno-name" className="form-label">Nom de la technologie</label>
                     <input
+                        placeholder="Exemple: React"
                         type="text"
                         className="form-control"
                         name="name"
@@ -49,9 +50,11 @@ const AddTechno = (props) => {
                         id="techno-categorie"
                         aria-describedby="emailHelp"
                     >
+                        <option value="Back-End">Selectionnez une categorie de technologie</option>
                         <option value="Front End">Front End</option>
                         <option value="Back End">Back End</option>
                         <option value="Full Stack">Full Stack</option>
+                        <option value="Mobile">Mobile</option>
                     </select>
                 </div>
                 <div className="form-control my-2">

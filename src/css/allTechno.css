@@ -1,3 +1,7 @@
-.all-techno{
-    background: blue;
+.techno-liste{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }

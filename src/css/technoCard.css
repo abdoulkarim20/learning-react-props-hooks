@@ -1,10 +1,25 @@
-.style-techno-card{
-    display: flex;
-    flex-direction: row;
-    border: 2px solid red;
-    margin: 1%;
-    width: 30%;
-    align-items: center;
-    justify-content: center;
-    padding: 1%;
+.style-techno-card {
+  display: flex;
+  flex-direction: row;
+  border: 2px solid red;
+  margin: 1%;
+  width: 30%;
+  align-items: center;
+  justify-content: center;
+  padding: 1%;
+}
+.btn-delete {
+  background: #ce0033;
+  cursor: pointer;
+  height: 50px;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  color: #ffffff;
+  font-weight: 500;
+}
+.container-delete-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

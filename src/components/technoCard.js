@@ -1,5 +1,5 @@
 const TechnoCard = (props) => {
-    const { techno } = props;
+    const { techno, handleDelete } = props;
     return (
         <div className="card style-techno-card">
             <div key={techno.technoid}>
@@ -8,9 +8,14 @@ const TechnoCard = (props) => {
                 <p className="text-center">{techno.categorie}</p>
                 <h4 className="text-center">Description</h4>
                 <p className="text-center">{techno.description}</p>
+                <div className="container-delete-btn">
+                    <button className="btn-delete" onClick={() => handleDelete(techno.technoid)}>Delete</button>
+                </div>
             </div>
         </div>
     )
 
 }
 export default TechnoCard;
+
+/*React Prop drilling*/

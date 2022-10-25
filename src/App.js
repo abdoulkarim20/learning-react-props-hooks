@@ -1,5 +1,5 @@
 import './css/app.css';
-import {v4 as uuidv4} from 'uuid';
+import { v4 as uuidv4 } from 'uuid';
 import Home from './pages/Home';
 import AddTechno from './pages/AddTechno';
 import AllTechos from './pages/AllTechos';
@@ -11,9 +11,14 @@ function App() {
   /*un objet de techno
   [{name:"react",categorie:"front end",description:"objectif devenir un MERN"}]*/
   const handleAddTechno = (techno) => {
-    setTechno([...technos, {...techno,technoid:uuidv4()}])
+    setTechno([...technos, { ...techno, technoid: uuidv4() }])
     console.log('la techno ajoute est:', techno);
   }
+  const handleDelete = (id) => {
+    /*React Prop drilling*/
+    setTechno(technos.filter((techno) => techno.technoid !== id))
+  }
+
   return (
     <>
       <Menu />
@@ -25,7 +30,7 @@ function App() {
         />
         <Route
           path='/all'
-          element={<AllTechos technos={technos} />}
+          element={<AllTechos technos={technos} handleDelete={handleDelete} />}
         />
       </Routes>
     </>

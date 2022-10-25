@@ -1,7 +1,7 @@
 import TechnoCard from "../components/technoCard";
 
 const AllTechnos = (props) => {
-    const { technos } = props;
+    const { technos, handleDelete } = props;
     console.log('les technos ajouter depuis le formulaire sont:', technos);
     return (
         <div className="container add-techno">
@@ -9,7 +9,7 @@ const AllTechnos = (props) => {
             <div className="techno-liste">
                 {
                     technos.map(techno => (
-                        <TechnoCard techno={techno} key={techno.technoid} />
+                        <TechnoCard techno={techno} key={techno.technoid} handleDelete={handleDelete} />
                     ))
                 }
             </div>
